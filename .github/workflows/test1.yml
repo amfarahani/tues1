@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
 
     # A job consists of multiple steps
-    steps
+    steps:
 
       # Step 1: Download (clone) the repository code
       # Without this step, the runner would not have your files
