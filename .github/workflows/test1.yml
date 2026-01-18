@@ -38,11 +38,12 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          pip install pytest
 
-      # Step 4: Run the Flask application
-      # This executes app.py on the GitHub Actions runner
-      # NOTE: This runs temporarily and stops when the job finishes
-      - name: Run ML tests
+      # Step 4: Run unit tests (pytest)
+      # This verifies the Flask app and ML model without starting the server
+      - name: Run tests
         run: |
           pytest -q
+
 
